@@ -211,3 +211,8 @@ endfunction
 command FindOccurences call FindOccurencesOfSymbolUnderCursor()
 command -nargs=1 SearchOccurences call FindOccurences(<f-args>)
 command FindReferences YcmCompleter GoToReferences
+
+:augroup autotagbar
+:       autocmd! 
+:       au BufEnter *.py,*.c,*.cpp :TagbarToggle
+:augroup END
