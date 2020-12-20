@@ -195,6 +195,7 @@ function MakeCppClassFiles(name_no_extension)
 endfunction
 
 py3 from cpp_helpers import * 
+py3 from cpp_iface_finder import * 
 
 command -nargs=1 MakeCppClassFiles call MakeCppClassFiles(<f-args>)
 command FillCorrespondingCppClassSourceFile py3 fill_corresponding_cpp_class_source_file()
@@ -211,6 +212,7 @@ endfunction
 command FindOccurences call FindOccurencesOfSymbolUnderCursor()
 command -nargs=1 SearchOccurences call FindOccurences(<f-args>)
 command FindReferences YcmCompleter GoToReferences
+command ImplementInterface py3 implement_interface() 
 
 :augroup autotagbar
 :       autocmd! 
