@@ -214,5 +214,5 @@ command FindReferences YcmCompleter GoToReferences
 
 :augroup autotagbar
 :       autocmd! 
-:       au BufEnter *.py,*.c,*.cpp :TagbarToggle
+:       au BufEnter *.py,*.c,*.cpp :TagbarOpen
 :augroup END
