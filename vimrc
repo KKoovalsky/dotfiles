@@ -197,6 +197,7 @@ endfunction
 
 py3 from cpp_helpers import * 
 py3 from cpp_iface_finder import * 
+py3 from cpp_file_navigator import * 
 
 command -nargs=1 MakeCppClassFiles call MakeCppClassFiles(<f-args>)
 command FillCorrespondingCppClassSourceFile py3 fill_corresponding_cpp_class_source_file()
@@ -217,5 +218,5 @@ command ImplementInterface py3 implement_interface()
 
 :augroup autotagbar
 :       autocmd! 
-:       au BufEnter *.py,*.c,*.cpp :TagbarOpen
+:       au BufEnter *.py,*.c,*.cpp,*.h,*.hpp :TagbarOpen
 :augroup END
