@@ -185,6 +185,8 @@ let @b = 'V}:s/;/{}\r/g:ClangFormat'
 
 let g:autopep8_ignore="E402"
 
+let g:gutentags_ctags_exclude = ['build*', 'gendocs', 'compile_commands.json']
+
 function MakeCppClassFiles(name_no_extension)
     let path = b:netrw_curdir . '/' . a:name_no_extension
     let header_path = path . '.hpp'
