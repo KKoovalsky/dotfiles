@@ -2,6 +2,7 @@ import subprocess
 import re
 import os
 import vim
+import cpp_file_navigator
 
 
 class VimBufferMatchError(Exception):
@@ -109,10 +110,14 @@ def mark_current_class_iface_implementer(iface_name):
 
 
 def insert_inside_class_definition(lines):
-    index = find_index_of_line_with_class_declaration()
-    vim_buffer = vim.current.window.buffer
-    index_inside = index + 2
-    vim_buffer.append(lines, index_inside)
+    vim_buffer = vim.current.buffer
+    current_file = vim_buffer.name
+    class_name = get_class_name_from_file(current_file)
+    index = cpp_file_navigator.find_last_line_of_constructor(
+        class_name, current_file)
+    lines.insert(0, '\n')
+    lines.append('\n')
+    vim_buffer.append(lines, index)
 
 
 def find_index_of_line_with_include_statement():
