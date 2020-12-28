@@ -101,12 +101,25 @@ def find_index_of_line_with_class_declaration():
     return find_index_of_line_matching_regex(regex)
 
 
+def is_class_already_inheriting(line_with_class_declaration):
+    return ':' in line_with_class_declaration
+
+
+def create_updated_class_declaration_with_new_base_class(
+        line_with_class_declaration, new_base_class_name):
+    new_declaration_format = '{}, public {}' if is_class_already_inheriting(
+        line_with_class_declaration) else '{} : public {}'
+    return new_declaration_format.format(
+        line_with_class_declaration, new_base_class_name)
+
+
 def mark_current_class_iface_implementer(iface_name):
     index = find_index_of_line_with_class_declaration()
     vim_buffer = vim.current.window.buffer
     current_decl = vim_buffer[index]
-    implementing_iface = '{} : public {}'.format(current_decl, iface_name)
-    vim_buffer[index] = implementing_iface
+    new_decl = create_updated_class_declaration_with_new_base_class(
+        current_decl, iface_name)
+    vim_buffer[index] = new_decl
 
 
 def insert_inside_class_definition(lines):
