@@ -110,7 +110,7 @@ nnoremap <C-H> <C-W><C-H>
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
@@ -184,7 +184,6 @@ let @b = 'V}:s/;/{}\r/g:ClangFormat'
 :set wildmenu
 
 let g:autopep8_ignore="E402"
-let g:syntastic_python_flake8_args='--ignore=E402'
 
 function MakeCppClassFiles(name_no_extension)
     let path = b:netrw_curdir . '/' . a:name_no_extension
