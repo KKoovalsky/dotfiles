@@ -4,7 +4,7 @@ import os
 
 def _is_constructor_of_class(class_name):
     return lambda node: node.kind == clcidx.CursorKind.CONSTRUCTOR and \
-        '{}('.format(class_name) in node.displayname
+        '{}'.format(class_name) in node.displayname
 
 
 def find_last_line_of_constructor(class_name, source_file):
