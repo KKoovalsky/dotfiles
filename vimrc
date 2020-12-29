@@ -198,6 +198,7 @@ endfunction
 py3 from cpp_helpers import * 
 py3 from cpp_iface_finder import * 
 py3 from cpp_file_navigator import * 
+py3 from cpp_file_finder import * 
 
 command -nargs=1 MakeCppClassFiles call MakeCppClassFiles(<f-args>)
 command FillCorrespondingCppClassSourceFile py3 fill_corresponding_cpp_class_source_file()
@@ -211,10 +212,17 @@ function FindOccurencesOfSymbolUnderCursor()
     call FindOccurences(current_word)
 endfunction
 
+function GoToCorrespondingSourceOrHeaderFile()
+    let current_file = expand("%:t")
+    let corresponding_file = py3eval('find_corresponding_source_or_header_file("' . current_file . '")')
+    execute "tab drop" corresponding_file
+endfunction
+
 command FindOccurences call FindOccurencesOfSymbolUnderCursor()
 command -nargs=1 SearchOccurences call FindOccurences(<f-args>)
 command FindReferences YcmCompleter GoToReferences
 command ImplementInterface py3 implement_interface() 
+command GoToCorrespondingSourceOrHeaderFile call GoToCorrespondingSourceOrHeaderFile() 
 
 :augroup autotagbar
 :       autocmd! 
