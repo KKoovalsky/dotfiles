@@ -183,9 +183,13 @@ let @b = 'V}:s/;/{}\r/g:ClangFormat'
 
 :set wildmenu
 
-let g:autopep8_ignore="E402"
-
 let g:gutentags_ctags_exclude = ['build*', 'gendocs', 'compile_commands.json']
+
+py3 from cpp_helpers import * 
+py3 from cpp_iface_finder import * 
+py3 from cpp_file_navigator import * 
+py3 from cpp_file_finder import * 
+py3 from cpp_method_definition_maker import * 
 
 function MakeCppClassFiles(name_no_extension)
     let path = b:netrw_curdir . '/' . a:name_no_extension
@@ -194,14 +198,6 @@ function MakeCppClassFiles(name_no_extension)
     execute 'args ' . header_path . ' ' source_path . ' | vert all'
     startinsert
 endfunction
-
-py3 from cpp_helpers import * 
-py3 from cpp_iface_finder import * 
-py3 from cpp_file_navigator import * 
-py3 from cpp_file_finder import * 
-
-command -nargs=1 MakeCppClassFiles call MakeCppClassFiles(<f-args>)
-command FillCorrespondingCppClassSourceFile py3 fill_corresponding_cpp_class_source_file()
 
 function FindOccurences(symbol)
     execute ':AsyncRun git grep -rne ' . a:symbol . ' --recurse-submodules -- *.{c,cpp,cxx,h,hpp,hxx}'
@@ -218,11 +214,21 @@ function GoToCorrespondingSourceOrHeaderFile()
     execute "tab drop" corresponding_file
 endfunction
 
+function CreateMethodDefinition()
+    let method_definition_snippet = py3eval('create_snippet_with_method_definition_for_method_under_cursor()')
+    call GoToCorrespondingSourceOrHeaderFile()
+    norm! Go
+    call UltiSnips#Anon(method_definition_snippet)
+endfunction()
+
+command -nargs=1 MakeCppClassFiles call MakeCppClassFiles(<f-args>)
+command FillCorrespondingCppClassSourceFile py3 fill_corresponding_cpp_class_source_file()
 command FindOccurences call FindOccurencesOfSymbolUnderCursor()
 command -nargs=1 SearchOccurences call FindOccurences(<f-args>)
 command FindReferences YcmCompleter GoToReferences
 command ImplementInterface py3 implement_interface() 
 command GoToCorrespondingSourceOrHeaderFile call GoToCorrespondingSourceOrHeaderFile() 
+command CreateMethodDefinition call CreateMethodDefinition()
 
 :augroup autotagbar
 :       autocmd! 
