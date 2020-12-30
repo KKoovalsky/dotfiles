@@ -191,6 +191,7 @@ py3 from cpp_file_navigator import *
 py3 from cpp_file_finder import * 
 py3 from cpp_method_definition_maker import * 
 py3 from unity_tests_helpers import * 
+py3 from cpp_word_replacer_across_project import * 
 
 function MakeCppClassFiles(name_no_extension)
     let path = b:netrw_curdir . '/' . a:name_no_extension
@@ -201,12 +202,17 @@ function MakeCppClassFiles(name_no_extension)
 endfunction
 
 function FindOccurences(symbol)
-    execute ':AsyncRun git grep -rne ' . a:symbol . ' --recurse-submodules -- *.{c,cpp,cxx,h,hpp,hxx}'
+    execute ':AsyncRun git grep --untracked -rne ' . a:symbol . ' -- "*.c" "*.cpp" "*.h" "*.hpp"'
 endfunction
 
 function FindOccurencesOfSymbolUnderCursor()
     let current_word = expand("<cword>")
     call FindOccurences(current_word)
+endfunction
+
+function ReplaceOccurencesOfWordUnderCursor(replacement)
+    let current_word = expand("<cword>")
+    call py3eval('replace_word_project_wise("' . current_word . '", "' . a:replacement . '")')
 endfunction
 
 function GoToCorrespondingSourceOrHeaderFile()
@@ -231,6 +237,7 @@ command ImplementInterface py3 implement_interface()
 command GoToCorrespondingSourceOrHeaderFile call GoToCorrespondingSourceOrHeaderFile() 
 command CreateMethodDefinition call CreateMethodDefinition()
 command -nargs=1 CreateUnityTest py3 create_unity_test(<f-args>)
+command -nargs=1 ReplaceOccurencesOfWordUnderCursor call ReplaceOccurencesOfWordUnderCursor(<f-args>)
 
 :augroup autotagbar
 :       autocmd! 
