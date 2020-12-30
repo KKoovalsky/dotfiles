@@ -396,3 +396,17 @@ endsnippet
 snippet ctor "Class constructor" "True" e
 ${1:explicit} `!p snip.rv = get_class_name_from_few_previous_lines(snip.buffer, vim.current.window.cursor[0])`($2) $0
 endsnippet
+
+snippet catch2testfile "Catch2 test file template"
+/**
+ * @file        `!p snip.rv = fn`
+ * @brief       $1
+ * @author      Kacper Kowalski - $2
+ */
+#include <catch2/catch_test_macros.hpp>
+
+TEST_CASE("$3", "[$4]")
+{
+    $0
+}
+endsnippet
