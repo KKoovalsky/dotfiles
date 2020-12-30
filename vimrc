@@ -190,6 +190,7 @@ py3 from cpp_iface_finder import *
 py3 from cpp_file_navigator import * 
 py3 from cpp_file_finder import * 
 py3 from cpp_method_definition_maker import * 
+py3 from unity_tests_helpers import * 
 
 function MakeCppClassFiles(name_no_extension)
     let path = b:netrw_curdir . '/' . a:name_no_extension
@@ -229,6 +230,7 @@ command FindReferences YcmCompleter GoToReferences
 command ImplementInterface py3 implement_interface() 
 command GoToCorrespondingSourceOrHeaderFile call GoToCorrespondingSourceOrHeaderFile() 
 command CreateMethodDefinition call CreateMethodDefinition()
+command -nargs=1 CreateUnityTest py3 create_unity_test(<f-args>)
 
 :augroup autotagbar
 :       autocmd! 

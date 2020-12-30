@@ -1,4 +1,5 @@
 import re
+import os
 
 
 def is_header_file(path):
@@ -16,3 +17,14 @@ def get_class_name_from_few_previous_lines(vim_buffer, current_line_num):
         if match:
             return match.group(2)
     return ''
+
+
+def test_file_name_to_pretty_pascal_case(filename):
+    no_ext = os.path.splitext(filename)[0]
+    no_test_str = no_ext.replace('test', '')
+    no_leading_and_trailing_underscores = no_test_str.rstrip('_').lstrip('_')
+    return snake_case_to_pascal_case(no_leading_and_trailing_underscores)
+
+
+def snake_case_to_pascal_case(s):
+    return s.replace("_", " ").title().replace(" ", "")
