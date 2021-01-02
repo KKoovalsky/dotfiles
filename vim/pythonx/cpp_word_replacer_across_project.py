@@ -20,7 +20,7 @@ def _get_cpp_files_containing(word):
 
 def _replace_in_place(filepath, word_to_be_replaced, new_word):
     cmd = ['sed', '-i',
-           "s/{}/{}/g".format(word_to_be_replaced, new_word), filepath]
+           "s~{}~{}~g".format(word_to_be_replaced, new_word), filepath]
     subprocess.run(cmd)
 
 
