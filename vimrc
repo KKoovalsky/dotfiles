@@ -25,6 +25,7 @@ Plugin 'skywind3000/asyncrun.vim'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'francoiscabrol/ranger.vim'
 
 " All of Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,7 +68,7 @@ nnoremap <C-H> <C-W><C-H>
 :inoremap <C-v> <C-o>"+p
 
 " Map Ctrl-E for file explorer
-:map <C-e> :Explore<CR>
+:map <C-e> :Ranger<CR>
 
 " File explorer customization
 let g:netrw_banner = 0
