@@ -216,6 +216,10 @@ function ReplaceOccurencesOfWordUnderCursor(replacement)
     call py3eval('replace_word_project_wise("' . current_word . '", "' . a:replacement . '")')
 endfunction
 
+function ReplaceProjectWise(searched_string, replacement)
+    call py3eval('replace_word_project_wise("' . a:searched_string . '", "' . a:replacement . '")')
+endfunction
+
 function GoToCorrespondingSourceOrHeaderFile()
     let current_file = expand("%:t")
     let corresponding_file = py3eval('find_corresponding_source_or_header_file("' . current_file . '")')
@@ -229,6 +233,11 @@ function CreateMethodDefinition()
     call UltiSnips#Anon(method_definition_snippet)
 endfunction()
 
+function RenameCurrentWord(replacement)
+    let current_word = expand("<cword>")
+    execute '%s/' . current_word . '/' . a:replacement . '/g'
+endfunction()
+
 command -nargs=1 MakeCppClassFiles call MakeCppClassFiles(<f-args>)
 command FillCorrespondingCppClassSourceFile py3 fill_corresponding_cpp_class_source_file()
 command FindOccurences call FindOccurencesOfSymbolUnderCursor()
@@ -239,6 +248,8 @@ command GoToCorrespondingSourceOrHeaderFile call GoToCorrespondingSourceOrHeader
 command CreateMethodDefinition call CreateMethodDefinition()
 command -nargs=1 CreateUnityTest py3 create_unity_test(<f-args>)
 command -nargs=1 ReplaceOccurencesOfWordUnderCursor call ReplaceOccurencesOfWordUnderCursor(<f-args>)
+command -nargs=+ ReplaceProjectWise call ReplaceProjectWise(<f-args>)
+command -nargs=1 RenameCurrentWord call RenameCurrentWord(<f-args>)
 
 :augroup autotagbar
 :       autocmd! 
