@@ -22,6 +22,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'skywind3000/asyncrun.vim'
+Plugin 'skywind3000/asynctasks.vim'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'dracula/vim', { 'name': 'dracula' }
