@@ -54,7 +54,7 @@ def make_test_declaration_string(name):
 def make_test_definition_lines(name):
     return ['static void {}()'.format(name),
             '{',
-            '    TEST_ASSERT(FALSE);',
+            '    TEST_ASSERT(false);',
             '}',
             '']
 
