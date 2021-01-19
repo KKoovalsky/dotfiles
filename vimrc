@@ -76,8 +76,8 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
 " Tab navigation like Firefox.
-nnoremap <C-t> :tabnew<CR>:Ranger<CR>
-inoremap <C-t> <Esc>:tabnew<CR>:Ranger<CR>
+nnoremap <C-t> :tabnew<CR>:Explore<CR>
+inoremap <C-t> <Esc>:tabnew<CR>:Explore<CR>
 
 " Show me line numbers for better navigataion and debugging
 set number
@@ -175,7 +175,6 @@ let g:autopep8_disable_show_diff=1
 " =====================================================================================================================
 " Ranger config
 " =====================================================================================================================
-let g:ranger_replace_netrw = 1 
 
 " =====================================================================================================================
 " MACROS FOR C PROGRAMMING
