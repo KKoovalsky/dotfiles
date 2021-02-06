@@ -23,11 +23,14 @@ def get_git_not_ignored_and_untracked_files():
 
 def contains_abstract_class(filename):
     pattern = re.compile('virtual .* = 0;')
-    for _, line in enumerate(open(filename)):
-        it = re.finditer(pattern, line)
-        if next(it, None) is not None:
-            return True
-    return False
+    try:
+        for _, line in enumerate(open(filename)):
+            it = re.finditer(pattern, line)
+            if next(it, None) is not None:
+                return True
+        return False
+    except UnicodeDecodeError:
+        print('UnicodeDecodeError in {}'.format(filename), file=os.sys.stderr)
 
 
 def is_header_file(filename):
