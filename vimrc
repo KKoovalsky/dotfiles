@@ -96,8 +96,8 @@ highlight ColorColumn ctermbg=240
 
 " UltiSnips shortcuts config
 let g:UltiSnipsExpandTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<c-,>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 
 let g:BASH_Ctrl_j="<c-p>"
 
