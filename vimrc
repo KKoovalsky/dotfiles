@@ -27,6 +27,7 @@ Plugin 'tell-k/vim-autopep8'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'francoiscabrol/ranger.vim'
+Plugin 'inkarkat/vim-UnconditionalPaste'
 
 " All of Plugins must be added before the following line
 call vundle#end()            " required
