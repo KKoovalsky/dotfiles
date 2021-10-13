@@ -1,0 +1,6 @@
+:imap jk <Esc>
+
+set NERDTree
+
+set highlightedyank
+let g:highlightedyank_highlight_duration = 2000
