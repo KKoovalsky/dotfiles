@@ -156,7 +156,7 @@ let g:lightline = {
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'absolutepath' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
+      \   'gitbranch': 'Fugitive#Head'
       \ },
       \ }
 
