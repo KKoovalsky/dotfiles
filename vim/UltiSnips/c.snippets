@@ -8,17 +8,15 @@ snippet fdoxy
 /**
  * @file	${1:`!p snip.rv = snip.fn or "filename"`}
  * @brief	$0
- * @author	Kacper Kowalski - $2
  */
 endsnippet
 
 snippet fdoxydefgroup "Doxygen defgroup tag"
 /**
  * @defgroup $1	$2
- * @brief $3
  * @{
  */
-$4
+$0
 /** @} */ // End of group $1
 endsnippet
 
@@ -123,15 +121,14 @@ snippet hppfiletemplate "Template for header file"
 /**
  * @file        `!p snip.rv = fn`
  * @brief       $1
- * @author      Kacper Kowalski - $2
  */
 #ifndef `!p snip.rv = to_include_guard(fn)`
 #define `!p snip.rv = to_include_guard(fn)`
 
-class $3
+class $2
 {
   public:
-    explicit $3($4);
+    explicit $2($3);
     $0
 
   private:
@@ -145,15 +142,14 @@ snippet ifacefiletemplate "Template for header file defining an interface"
 /**
  * @file        `!p snip.rv = fn`
  * @brief       $1
- * @author      Kacper Kowalski - $2
  */
 #ifndef `!p snip.rv = to_include_guard(fn)`
 #define `!p snip.rv = to_include_guard(fn)`
 
-struct $3
+struct $2
 {
     $0
-    virtual ~$3() = default;
+    virtual ~$2() = default;
 };
 
 #endif /* `!p snip.rv = to_include_guard(fn)` */
@@ -167,7 +163,6 @@ snippet unitytestfile "Unity test file"
 /**
  * @file        `!p snip.rv = fn`
  * @brief       $1
- * @author      Kacper Kowalski - $2
  */
 #include "unity.h"
 
@@ -175,12 +170,11 @@ snippet unitytestfile "Unity test file"
 // Test cases declaration
 // --------------------------------------------------------------------------------------------------------------------
 /**
- * @defgroup ${3:`!p snip.rv = test_file_name_to_pretty_pascal_case(fn) + 'Tests'`}
+ * @defgroup ${2:`!p snip.rv = test_file_name_to_pretty_pascal_case(fn) + 'Tests'`} $3
  * @{
  */
 $0
-
-/** @} */ // End of group $3
+/** @} */ // End of group $2
 
 // --------------------------------------------------------------------------------------------------------------------
 // Helpers
@@ -190,16 +184,6 @@ $0
 // Test cases definition
 // --------------------------------------------------------------------------------------------------------------------
 
-// --------------------------------------------------------------------------------------------------------------------
-// Runner
-// --------------------------------------------------------------------------------------------------------------------
-int test_`!p snip.rv = test_file_name_to_pretty(fn)`()
-{
-    UNITY_BEGIN();
-
-
-    return UNITY_END();
-}
 endsnippet
 
 snippet freertos_inc_task
@@ -408,11 +392,10 @@ snippet catch2testfile "Catch2 test file template"
 /**
  * @file        `!p snip.rv = fn`
  * @brief       $1
- * @author      Kacper Kowalski - $2
  */
 #include <catch2/catch_test_macros.hpp>
 
-TEST_CASE("$3", "[$4]")
+TEST_CASE("$2", "[$3]")
 {
     $0
 }
