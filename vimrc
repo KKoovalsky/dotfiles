@@ -183,7 +183,7 @@ let g:autopep8_disable_show_diff=1
 " =====================================================================================================================
 let g:ctrlp_root_markers = [ '.project-root' ]
 let g:ctrlp_custom_ignore = {
-  \ 'file': '\v\.(o|d)$',
+  \ 'file': '\v\.(o|d|obj|a|so|map)$',
   \ }
 
 
