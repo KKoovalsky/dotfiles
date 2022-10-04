@@ -29,6 +29,7 @@ Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'francoiscabrol/ranger.vim'
 Plugin 'inkarkat/vim-UnconditionalPaste'
 Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-surround'
 
 " All of Plugins must be added before the following line
 call vundle#end()            " required
