@@ -9,7 +9,6 @@ endif
 
 call plug#begin()
 
-Plug 'VundleVim/Vundle.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rhysd/vim-clang-format'
 Plug 'honza/vim-snippets'
