@@ -190,6 +190,9 @@ let @b = 'V}:s/;/{}\r/g:ClangFormat'
 
 :set wildmenu
 
+let g:black_linelength = 80
+let g:black_preview = 1
+
 let g:gutentags_ctags_exclude = ['build*', 'gendocs', 'compile_commands.json']
 
 py3 from cpp_helpers import * 
