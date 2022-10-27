@@ -16,7 +16,7 @@ Plug 'SirVer/ultisnips'
 Plug 'vim-scripts/bash-support.vim'
 Plug 'vim-scripts/bats.vim'
 Plug 'kawaz/batscheck.vim'
-Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
 Plug 'tomtom/tcomment_vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'itchyny/lightline.vim'
@@ -100,16 +100,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Syntastic configuration
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers=['flake8']
-
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_max_diagnostics_to_display = 1000
 let g:ycm_complete_in_comments = 1
@@ -190,6 +180,8 @@ let g:black_linelength = 80
 let g:black_preview = 1
 
 let g:gutentags_ctags_exclude = ['build*', 'gendocs', 'compile_commands.json']
+
+let g:ale_linters = {'c': [], 'cpp': [], 'python': ['flake8']}
 
 py3 from cpp_helpers import * 
 py3 from cpp_iface_finder import * 
