@@ -112,6 +112,22 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_always_populate_location_list = 1
 let g:ycm_clangd_args=['--header-insertion=never']
 
+let g:ycm_language_server = 
+  \ [
+  \   {
+  \     'name': 'cmake',
+  \     'cmdline': [ 'cmake-language-server' ],
+  \     'filetypes': [ 'cmake' ],
+  \   },
+  \   {
+  \     'name': 'bash',
+  \     'cmdline': [ 'bash-language-server', 'start' ],
+  \     'filetypes': [ 'sh', 'bash' ],
+  \   }
+  \ ]
+
+
+
 " :nmap <c-i> :YcmCompleter GoToInclude<CR>
 :nmap <F3> :YcmCompleter GoToDefinition<CR>
 :nmap <c-d> :YcmCompleter GoToDeclaration<CR>
