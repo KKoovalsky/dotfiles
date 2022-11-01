@@ -1,0 +1,6 @@
+format:
+  tab_size: 4
+  line_width: 120
+
+lint:
+  function_pattern: '[0-9a-zA-Z_]+'
