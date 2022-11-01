@@ -269,6 +269,7 @@ command -nargs=1 UnityTestCreate py3 create_unity_test(<f-args>)
 command -nargs=1 ReplaceOccurencesOfWordUnderCursor call ReplaceOccurencesOfWordUnderCursor(<f-args>)
 command -nargs=+ ReplaceProjectWise call ReplaceProjectWise(<f-args>)
 command -nargs=1 RenameCurrentWord call RenameCurrentWord(<f-args>)
+command GherkinFormat %!ghokin fmt stdout
 
 :augroup autotagbar
 :       autocmd! 
