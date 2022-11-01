@@ -121,14 +121,9 @@ let g:ycm_always_populate_location_list = 1
 let g:ycm_language_server = 
   \ [
   \   {
-  \     'name': 'cmake',
-  \     'cmdline': [ 'cmake-language-server' ],
-  \     'filetypes': [ 'cmake' ],
-  \   },
-  \   {
   \     'name': 'bash',
   \     'cmdline': [ 'bash-language-server', 'start' ],
-  \     'filetypes': [ 'sh', 'bash' ],
+  \     'filetypes': [ 'sh', 'bash' ]
   \   }
   \ ]
 
@@ -203,7 +198,8 @@ let g:black_preview = 1
 
 let g:gutentags_ctags_exclude = ['build*', 'gendocs', 'compile_commands.json']
 
-let g:ale_linters = {'c': [], 'cpp': [], 'python': ['flake8']}
+let g:ale_linters = {'c': [], 'cpp': [], 'python': ['flake8'], 'cmake': ['cmake_lint']}
+let g:ale_cmake_cmake_lint_options = '--tab-size 4 --line-width 120 --function-pattern [0-9a-zA-Z_]+'
 
 py3 from cpp_helpers import * 
 py3 from cpp_iface_finder import * 
