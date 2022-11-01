@@ -117,7 +117,36 @@ ${VISUAL}$0
 #endif /* $2 */
 endsnippet
 
-snippet hppfiletemplate "Template for header file"
+snippet hppbarefiletemplate "Template for header file"
+/**
+ * @file        `!p snip.rv = fn`
+ * @brief       $1
+ */
+#ifndef `!p snip.rv = to_include_guard(fn)`
+#define `!p snip.rv = to_include_guard(fn)`
+
+$0
+
+#endif /* `!p snip.rv = to_include_guard(fn)` */
+endsnippet
+
+snippet hpptsepepefiletemplate "Template for header file with Tsepepe namespace"
+/**
+ * @file        `!p snip.rv = fn`
+ * @brief       $1
+ */
+#ifndef `!p snip.rv = to_include_guard(fn)`
+#define `!p snip.rv = to_include_guard(fn)`
+
+namespace Tsepepe
+{
+$0
+}
+
+#endif /* `!p snip.rv = to_include_guard(fn)` */
+endsnippet
+
+snippet hppfiletemplate "Template for header file with class"
 /**
  * @file        `!p snip.rv = fn`
  * @brief       $1
