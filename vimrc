@@ -47,6 +47,12 @@ set smarttab
 
 :imap jk <Esc>
 
+:nnoremap j jzz
+:nnoremap k kzz
+:nnoremap G Gzz
+:nnoremap <c-f> <c-f>zz
+:nnoremap <c-b> <c-b>zz
+
 " Set this shortcuts to easily navigate through panes
 nnoremap <c-j> <c-w><c-j>
 nnoremap <C-K> <C-W><C-K>
