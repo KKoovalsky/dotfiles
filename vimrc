@@ -52,6 +52,10 @@ set smarttab
 :nnoremap G Gzz
 :nnoremap <c-f> <c-f>zz
 :nnoremap <c-b> <c-b>zz
+:nnoremap n nzz
+
+:vnoremap j jzz
+:vnoremap k kzz
 
 " Set this shortcuts to easily navigate through panes
 nnoremap <c-j> <c-w><c-j>
