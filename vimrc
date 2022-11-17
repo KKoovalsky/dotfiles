@@ -128,6 +128,11 @@ let g:ycm_language_server =
   \     'name': 'bash',
   \     'cmdline': [ 'bash-language-server', 'start' ],
   \     'filetypes': [ 'sh', 'bash' ]
+  \   },
+  \   {
+  \     'name': 'cmake',
+  \     'cmdline': [ 'cmake-language-server' ],
+  \     'filetypes': [ 'cmake' ]
   \   }
   \ ]
 
