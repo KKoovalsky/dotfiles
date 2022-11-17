@@ -135,6 +135,7 @@ let g:ycm_language_server =
   \     'filetypes': [ 'cmake' ]
   \   }
   \ ]
+let g:ycm_log_level = 'debug'
 
 
 
