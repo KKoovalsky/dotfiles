@@ -120,6 +120,7 @@ let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_show_diagnostics_ui = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_always_populate_location_list = 1
+let g:ycm_enable_semantic_highlighting=1
 " let g:ycm_clangd_args=['--header-insertion=never']
 let g:ycm_clangd_binary_path = '/home/kacper/Workspace/LlvmProject/build_clangd_tools_extra_with_clang/bin/clangd'
 " let g:ycm_clangd_args=['--query-driver=/home/kacper/Workspace/LlvmProject/build_clangd_tools_extra_with_clang/*']
