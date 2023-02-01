@@ -27,12 +27,18 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'skywind3000/asynctasks.vim'
 Plug 'psf/black'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'francoiscabrol/ranger.vim'
 Plug 'inkarkat/vim-UnconditionalPaste'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-grepper'
+
+" Colorschemes
+Plug 'EdenEast/nightfox.nvim'
+Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', { 'name': 'dracula' }
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -89,9 +95,10 @@ set numberwidth=2
 " Enable 256 color palette
 set t_Co=256
 
-:colorscheme dracula
+" :colorscheme purify
+:colorscheme dayfox
 " Set colors for the bar
-highlight LineNr term=bold cterm=NONE ctermfg=yellow ctermbg=darkgrey gui=NONE guifg=DarkGrey guibg=NONE
+" highlight LineNr term=bold cterm=NONE ctermfg=yellow ctermbg=darkgrey gui=NONE guifg=DarkGrey guibg=NONE
 
 " Add vertical rule
 set colorcolumn=80,120
@@ -142,11 +149,12 @@ let g:ycm_language_server =
   \ ]
 let g:ycm_log_level = 'debug'
 
-
-
 " :nmap <c-i> :YcmCompleter GoToInclude<CR>
 :nmap <F3> :YcmCompleter GoToDefinition<CR>
 :nmap <c-d> :YcmCompleter GoToDeclaration<CR>
+
+call prop_type_add( 'YCM_HL_class', { 'highlight': 'Special' } )
+call prop_type_add( 'YCM_HL_struct', { 'highlight': 'Special' } )
 
 " Highlight yanked region with timeout
 let g:highlightedyank_highlight_duration = 2000
@@ -164,7 +172,7 @@ hi HighlightedyankRegion cterm=reverse gui=reverse ctermfg=187
 " For the lightline plugin
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'powerline',
+      \ 'colorscheme': 'PaperColor',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'absolutepath' ] ]
