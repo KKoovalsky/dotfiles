@@ -1,0 +1,16 @@
+{
+    "name": "Teal dark color scheme for shell prompts",
+    "groups": {
+        "user":                  { "fg": "black",  "bg": "purpleturquoise", "attrs": [] },
+        "cwd":                   { "fg": "gray4",  "bg": "gray1", "attrs": [] },
+        "cwd:current_folder":    { "fg": "gray7", "bg": "gray1", "attrs": [] },
+        "cwd:divider":           { "fg": "gray3", "bg": "gray1", "attrs": [] }
+    },
+    "mode_translations": {
+        "vicmd": {
+            "groups": {
+                "mode": {"fg": "darkestcyan", "bg": "white", "attrs": ["bold"]}
+            }
+        }
+    }
+}
