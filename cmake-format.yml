@@ -1,6 +1,8 @@
 format:
   tab_size: 4
   line_width: 120
+  command-case: unchanged
+  keyword-case: unchanged
 
 lint:
   function_pattern: '[0-9a-zA-Z_]+'

@@ -222,7 +222,7 @@ let g:black_preview = 1
 let g:gutentags_ctags_exclude = ['build*', 'gendocs', 'compile_commands.json']
 
 let g:ale_linters = {'c': [], 'cpp': [], 'python': ['flake8'], 'cmake': ['cmake_lint']}
-let g:ale_cmake_cmake_lint_options = '--tab-size 4 --line-width 120 --function-pattern [0-9a-zA-Z_]+'
+let g:ale_cmake_cmake_lint_options = '--tab-size 4 --line-width 120 --function-pattern [0-9a-zA-Z_]+ --command-case unchanged --keyword-case unchanged'
 command -nargs=0 CMakeFormat :ALEFix cmakeformat
 
 py3 from cpp_helpers import * 
