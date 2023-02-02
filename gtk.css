@@ -1,0 +1,10 @@
+.terminator-terminal-window notebook header, .terminator-terminal-window stack {
+    border: 0;
+}
+
+.terminator-terminal-window separator {
+    min-height: 2px;
+    min-width: 2px;
+    background-color: rgb(10, 10, 10);
+    background-image: image(rgb(10, 10, 10)), image(rgb(10, 10, 10))
+}
