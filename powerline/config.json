@@ -1,8 +1,8 @@
 {
     "ext": {
         "shell": {
-            "colorscheme": "light",
-            "theme": "default_leftonly"
+            "theme": "default_leftonly",
+            "colorscheme": "light"
         }
     }
 }
