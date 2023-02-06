@@ -95,7 +95,7 @@ set numberwidth=2
 " Enable 256 color palette
 set t_Co=256
 
-:colorscheme PaperColor
+:colorscheme nightfox
 " Set colors for the bar
 " highlight LineNr term=bold cterm=NONE ctermfg=yellow ctermbg=darkgrey gui=NONE guifg=DarkGrey guibg=NONE
 
@@ -171,7 +171,7 @@ hi HighlightedyankRegion cterm=reverse gui=reverse ctermfg=187
 " For the lightline plugin
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'absolutepath' ] ]

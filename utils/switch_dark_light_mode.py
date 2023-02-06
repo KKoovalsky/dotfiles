@@ -50,15 +50,13 @@ def set_terminator_config(mode):
 
 
 def set_terminator_border_color(mode):
-    gtk_css_path = os.path.join(get_dotfiles_path(), "gtk.css")
-    regex = re.compile(
-        r"(:root {\s+" r"--terminator-separator-color: )(.*)([\n\r])"
-    )
-    with open(gtk_css_path) as f:
-        gtk_css = f.read()
+    in_file_path = os.path.join(get_dotfiles_path(), "gtk.css.in")
+    out_file_path = os.path.join(get_dotfiles_path(), "gtk.css")
+    with open(in_file_path) as f:
+        gtk_css_in = f.read()
     border_color = theme[mode][1]
-    res = re.sub(regex, r"\1{}\3".format(border_color), gtk_css)
-    with open(gtk_css_path, "w") as f:
+    res = gtk_css_in.replace("TERMINATOR_SEPARATOR_COLOR", border_color)
+    with open(out_file_path, "w") as f:
         f.write(res)
 
 
