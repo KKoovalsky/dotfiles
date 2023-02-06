@@ -95,8 +95,7 @@ set numberwidth=2
 " Enable 256 color palette
 set t_Co=256
 
-" :colorscheme purify
-:colorscheme dayfox
+:colorscheme PaperColor
 " Set colors for the bar
 " highlight LineNr term=bold cterm=NONE ctermfg=yellow ctermbg=darkgrey gui=NONE guifg=DarkGrey guibg=NONE
 
