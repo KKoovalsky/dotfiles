@@ -6,8 +6,20 @@ import re
 import click
 
 theme = {
-    "dark": ("Dracula", "rgb(200, 200, 200)", "default"),
-    "light": ("Github", "rgb(20, 20, 20)", "light"),
+    "dark": (
+        "Dracula",
+        "rgb(200, 200, 200)",
+        "default",
+        "nightfox",
+        "powerline",
+    ),
+    "light": (  #
+        "Github",
+        "rgb(20, 20, 20)",
+        "light",
+        "PaperColor",
+        "PaperColor",
+    ),
 }
 
 
@@ -17,6 +29,7 @@ def main(mode):
     set_terminator_config(mode)
     set_terminator_border_color(mode)
     set_powerline_colortheme(mode)
+    set_vim_colorscheme(mode)
 
 
 def set_terminator_config(mode):
@@ -55,10 +68,30 @@ def set_powerline_colortheme(mode):
     )
     with open(powerline_config_path) as f:
         config = f.read()
-    regex = re.compile(r'("colorscheme": )"(\w+)"')
+    regex = re.compile(r'("colorscheme": )"\w+"')
     theme_name = theme[mode][2]
     res = re.sub(regex, r'\1"{}"'.format(theme_name), config)
     with open(powerline_config_path, "w") as f:
+        f.write(res)
+
+
+def set_vim_colorscheme(mode):
+    vimrc_path = os.path.join(get_dotfiles_path(), "vimrc")
+    with open(vimrc_path) as f:
+        config = f.read()
+    global_scheme_re = re.compile(r":colorscheme \w+")
+    global_scheme = theme[mode][3]
+    res = re.sub(
+        global_scheme_re, r":colorscheme {}".format(global_scheme), config
+    )
+    lightline_scheme_re = re.compile(r"'colorscheme': '\w+'")
+    lightline_scheme = theme[mode][4]
+    res = re.sub(
+        lightline_scheme_re,
+        r"'colorscheme': '{}'".format(lightline_scheme),
+        res,
+    )
+    with open(vimrc_path, "w") as f:
         f.write(res)
 
 
