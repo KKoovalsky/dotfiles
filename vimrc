@@ -96,8 +96,6 @@ set numberwidth=2
 set t_Co=256
 
 :colorscheme nightfox
-" Set colors for the bar
-" highlight LineNr term=bold cterm=NONE ctermfg=yellow ctermbg=darkgrey gui=NONE guifg=DarkGrey guibg=NONE
 
 " Add vertical rule
 set colorcolumn=80,120
