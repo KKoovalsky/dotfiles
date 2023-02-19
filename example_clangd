@@ -1,0 +1,10 @@
+If:
+    PathMatch: [ source/.* ]
+CompileFlags:
+    CompilationDatabase: build/
+    Add: [ -D__SOFT_FP__ ]
+---
+If:
+    PathMatch: [ tests/unittests/.* ]
+CompileFlags:
+    CompilationDatabase: build_host/
