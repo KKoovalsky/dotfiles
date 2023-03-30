@@ -1,0 +1,66 @@
+diff --git a/src/Makefile b/src/Makefile
+index 43249c20a..5ea13bc7d 100644
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -306,7 +306,7 @@ CClink = $(CC)
+ 
+ # examples you can uncomment:
+ #CONF_ARGS1 = --exec-prefix=/usr
+-#CONF_ARGS2 = --with-vim-name=vim8 --with-ex-name=ex8 --with-view-name=view8
++CONF_ARGS2 = --with-vim-name=vim9 --with-ex-name=ex9 --with-view-name=view9
+ #CONF_ARGS3 = --with-global-runtime=/etc/vim,/usr/share/vim
+ #CONF_ARGS4 = --with-local-dir=/usr/share
+ #CONF_ARGS5 = --without-local-dir
+@@ -353,7 +353,7 @@ CClink = $(CC)
+ #CONF_OPT_GUI = --enable-gui=gtk2 --disable-gtktest
+ #CONF_OPT_GUI = --enable-gui=gnome2
+ #CONF_OPT_GUI = --enable-gui=gnome2 --disable-gtktest
+-#CONF_OPT_GUI = --enable-gui=gtk3
++CONF_OPT_GUI = --enable-gui=gtk3
+ #CONF_OPT_GUI = --enable-gui=gtk3 --disable-gtktest
+ #CONF_OPT_GUI = --enable-gui=motif
+ #CONF_OPT_GUI = --enable-gui=motif --with-motif-lib="-static -lXm -shared"
+@@ -438,7 +438,7 @@ CClink = $(CC)
+ #CONF_OPT_PYTHON = --enable-pythoninterp
+ #CONF_OPT_PYTHON = --enable-pythoninterp --with-python-command=python2.7
+ #CONF_OPT_PYTHON = --enable-pythoninterp=dynamic
+-#CONF_OPT_PYTHON3 = --enable-python3interp
++CONF_OPT_PYTHON3 = --enable-python3interp
+ #CONF_OPT_PYTHON3 = --enable-python3interp --with-python3-command=python3.6
+ #CONF_OPT_PYTHON3 = --enable-python3interp=dynamic
+ 
+@@ -455,13 +455,14 @@ CClink = $(CC)
+ # Uncomment this when you want to include the Tcl interface.
+ # First one is for static linking, second one for dynamic loading.
+ # Debian package is "tcl-dev".
+-#CONF_OPT_TCL = --enable-tclinterp
++# This requires at least "normal" features, "tiny" doesn't work.
++CONF_OPT_TCL = --enable-tclinterp
+ #CONF_OPT_TCL = --enable-tclinterp=dynamic
+ #CONF_OPT_TCL = --enable-tclinterp --with-tclsh=tclsh8.4
+ 
+ # CSCOPE
+ # Uncomment this when you want to include the Cscope interface.
+-#CONF_OPT_CSCOPE = --enable-cscope
++CONF_OPT_CSCOPE = --enable-cscope
+ 
+ # NETBEANS - NetBeans interface. Only works with Motif, GTK, and gnome.
+ # Motif version must have XPM libraries (see |netbeans-xpm|).
+@@ -521,7 +522,7 @@ CClink = $(CC)
+ 
+ # libcanberra - For sound support.  Default is on for huge features.
+ # Uncomment one of the two to chose otherwise.
+-# CONF_OPT_CANBERRA = --enable-canberra
++CONF_OPT_CANBERRA = --enable-canberra
+ # CONF_OPT_CANBERRA = --disable-canberra
+ 
+ # libsodium - For enhanced encryption.  Default is on.
+@@ -953,7 +954,7 @@ TOOLS = xxd/xxd$(EXEEXT)
+ ### prefix	the top directory for the data (default "/usr/local")
+ #
+ # Uncomment the next line to install Vim in your home directory.
+-#prefix = $(HOME)
++prefix = $(HOME)/Programs/Vim9
+ 
+ ### exec_prefix	is the top directory for the executable (default $(prefix))
+ #
