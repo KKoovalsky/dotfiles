@@ -32,6 +32,7 @@ Plug 'inkarkat/vim-UnconditionalPaste'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-grepper'
+Plug 'github/copilot.vim'
 
 " Colorschemes
 Plug 'EdenEast/nightfox.nvim'
