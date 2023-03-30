@@ -130,7 +130,9 @@ let g:ycm_enable_semantic_highlighting=1
 let g:ycm_clangd_binary_path = '/home/kacper/Workspace/LlvmProject/build_clangd_tools_extra_with_clang/bin/clangd'
 " let g:ycm_clangd_args=['--query-driver=/home/kacper/Workspace/LlvmProject/build_clangd_tools_extra_with_clang/*']
 let g:ycm_clangd_args=['--hidden-features']
-nmap <leader>yfw <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>yfsw <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>yfsd <Plug>(YCMFindSymbolInDocument)
+nmap <leader>yfi :YcmCompleter FixIt<CR>
 
 let g:ycm_language_server = 
   \ [
