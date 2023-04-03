@@ -97,7 +97,7 @@ set numberwidth=2
 " Enable 256 color palette
 set t_Co=256
 
-:colorscheme nightfox
+:colorscheme PaperColor
 
 " Add vertical rule
 set colorcolumn=80,120
@@ -128,9 +128,10 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_always_populate_location_list = 1
 let g:ycm_enable_semantic_highlighting=1
 " let g:ycm_clangd_args=['--header-insertion=never']
-let g:ycm_clangd_binary_path = '/home/kacper/Workspace/LlvmProject/build_clangd_tools_extra_with_clang/bin/clangd'
+" let g:ycm_clangd_binary_path = '/home/kacper/Workspace/LlvmProject/build_clangd_tools_extra_with_clang/bin/clangd'
 " let g:ycm_clangd_args=['--query-driver=/home/kacper/Workspace/LlvmProject/build_clangd_tools_extra_with_clang/*']
 let g:ycm_clangd_args=['--hidden-features']
+
 nmap <leader>yfsw <Plug>(YCMFindSymbolInWorkspace)
 nmap <leader>yfsd <Plug>(YCMFindSymbolInDocument)
 nmap <leader>yfi :YcmCompleter FixIt<CR>
