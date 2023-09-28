@@ -165,6 +165,7 @@ call prop_type_add( 'YCM_HL_struct', { 'highlight': 'Special' } )
 
 " Highlight yanked region with timeout
 let g:highlightedyank_highlight_duration = 2000
+let g:highlightedyank_highlight_in_visual = 0
 hi HighlightedyankRegion cterm=reverse gui=reverse ctermfg=187
 
 " Highlight search result
