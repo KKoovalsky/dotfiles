@@ -5,6 +5,6 @@
 .terminator-terminal-window separator {
     min-height: 2px;
     min-width: 2px;
-    background-color: rgb(200, 200, 200);
-    background-image: image(rgb(200, 200, 200)), image(rgb(200, 200, 200))
+    background-color: rgb(20, 20, 20);
+    background-image: image(rgb(20, 20, 20)), image(rgb(20, 20, 20))
 }

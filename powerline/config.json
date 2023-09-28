@@ -2,7 +2,7 @@
     "ext": {
         "shell": {
             "theme": "default_leftonly",
-            "colorscheme": "default"
+            "colorscheme": "light"
         }
     }
 }

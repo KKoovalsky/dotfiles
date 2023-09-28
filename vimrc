@@ -174,7 +174,7 @@ hi HighlightedyankRegion cterm=reverse gui=reverse ctermfg=187
 " For the lightline plugin
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'powerline',
+      \ 'colorscheme': 'PaperColor',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'absolutepath' ] ]

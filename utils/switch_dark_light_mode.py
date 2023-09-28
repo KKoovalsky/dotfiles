@@ -10,7 +10,7 @@ theme = {
         "Dracula",
         "rgb(200, 200, 200)",
         "default",
-        "nightfox",
+        "archery",
         "powerline",
     ),
     "light": (  #
