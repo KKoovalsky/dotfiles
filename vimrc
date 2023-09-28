@@ -103,7 +103,8 @@ set t_Co=256
 set colorcolumn=80,120
 highlight ColorColumn ctermbg=240
 
-" UltiSnips shortcuts config
+" UltiSnips config
+let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME . "/.vim/Ultisnips"]
 let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
