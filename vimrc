@@ -204,6 +204,7 @@ nmap <F10> :AsyncRun
 let g:ctrlp_root_markers = [ '.project-root' ]
 let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(o|d|obj|a|so|map)$',
+  \ 'dir': 'build_ceedling'
   \ }
 
 " =====================================================================================================================
