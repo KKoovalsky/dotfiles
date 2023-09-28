@@ -128,6 +128,10 @@ let g:ycm_show_diagnostics_ui = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_always_populate_location_list = 1
 let g:ycm_enable_semantic_highlighting=1
+" let g:ycm_clangd_binary_path = '/home/kacper/Workspace/LlvmProject/build_clangd_tools_extra_with_clang/bin/clangd'
+" let g:ycm_clangd_binary_path = '/home/kacper/Toolchains/LlvmProject/Custom-f3a468929c03/bin/clangd'
+" let g:ycm_clangd_binary_path = '/home/kacper/.local/clangd_with_extract_subexpr_to_function/bin/clangd'
+" let g:ycm_clangd_binary_path = '/home/kacper/Workspace/LlvmProjectDirty/build/bin/clangd'
 " let g:ycm_clangd_args=['--header-insertion=never']
 " let g:ycm_clangd_binary_path = '/home/kacper/Workspace/LlvmProject/build_clangd_tools_extra_with_clang/bin/clangd'
 " let g:ycm_clangd_args=['--query-driver=/home/kacper/Workspace/LlvmProject/build_clangd_tools_extra_with_clang/*']
