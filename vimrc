@@ -33,6 +33,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-grepper'
 Plug 'github/copilot.vim'
+Plug 'KKoovalsky/TsepepeVim', { 'do': './build.py' }
 
 " Colorschemes
 Plug 'EdenEast/nightfox.nvim'
