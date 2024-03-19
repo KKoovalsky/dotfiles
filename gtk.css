@@ -8,3 +8,19 @@
     background-color: rgb(20, 20, 20);
     background-image: image(rgb(20, 20, 20)), image(rgb(20, 20, 20))
 }
+
+.header-bar.default-decoration {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    }
+
+.header-bar.default-decoration .button.titlebutton {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* No line below the title bar */
+.ssd .titlebar {
+    border-width: 2px;
+    box-shadow: none;
+}
