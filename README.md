@@ -10,6 +10,7 @@
 * flake8
 * terminator with Github and Dracula themes (Terminator Themes)
 * Universal ctags https://github.com/universal-ctags/ctags
+* kitty themes: `git clone --depth 1 https://github.com/dexpota/kitty-themes.git ~/.config/kitty/kitty-themes`
 
 ## Paths
 
