@@ -21,3 +21,4 @@
 * Vim custom C++ helpers: `ln -s ~/Workspace/Dotfiles/vim/pythonx ~/.vim/pythonx`
 * Ultisnips: `mkdir ~/.vim/Ultisnips && ln -s ~/Workspace/Dotfiles/vim/UltiSnips/c.snippets ~/.vim/Ultisnips/c.snippets`
 * AsyncTasks - `~/.vim/tasks.ini`
+* Kitty - `~./config/kitty/kitty.conf`
