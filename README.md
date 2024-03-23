@@ -11,6 +11,8 @@
 * terminator with Github and Dracula themes (Terminator Themes)
 * Universal ctags https://github.com/universal-ctags/ctags
 * kitty themes: `git clone --depth 1 https://github.com/dexpota/kitty-themes.git ~/.config/kitty/kitty-themes`
+* tmux
+* tmux TPM: `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm` and 'prefix + I'.
 
 ## Paths
 
