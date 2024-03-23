@@ -9,7 +9,7 @@ def on_focus_change(boss: Boss, window: Window, data: Dict[str, Any]) -> None:
     if data["focused"]:
         window.change_colors({DynamicColor.default_bg: bg.as_sharp})
     else:
-        dimm_rate = 0.6
+        dimm_rate = 0.3
         dimmed_bg = Color(
             int(bg.red * dimm_rate),
             int(bg.g * dimm_rate),
