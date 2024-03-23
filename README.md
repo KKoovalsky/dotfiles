@@ -11,8 +11,7 @@
 * terminator with Github and Dracula themes (Terminator Themes)
 * Universal ctags https://github.com/universal-ctags/ctags
 * kitty themes: `git clone --depth 1 https://github.com/dexpota/kitty-themes.git ~/.config/kitty/kitty-themes`
-* tmux
-* tmux TPM: `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm` and 'prefix + I'.
+* neovim kickstart: `git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim`
 
 ## Paths
 
@@ -24,4 +23,4 @@
 * Ultisnips: `mkdir ~/.vim/Ultisnips && ln -s ~/Workspace/Dotfiles/vim/UltiSnips/c.snippets ~/.vim/Ultisnips/c.snippets`
 * AsyncTasks - `~/.vim/tasks.ini`
 * Kitty - `~./config/kitty/kitty.conf`
-* Tmux - `~/.tmux.conf`
+* Kitty dimmer - `~/.config/kitty/kitty_dim_inactive.py`
