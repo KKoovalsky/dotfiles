@@ -22,3 +22,4 @@
 * Ultisnips: `mkdir ~/.vim/Ultisnips && ln -s ~/Workspace/Dotfiles/vim/UltiSnips/c.snippets ~/.vim/Ultisnips/c.snippets`
 * AsyncTasks - `~/.vim/tasks.ini`
 * Kitty - `~./config/kitty/kitty.conf`
+* Tmux - `~/.tmux.conf`
