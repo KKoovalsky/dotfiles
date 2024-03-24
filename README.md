@@ -12,6 +12,7 @@
 * Universal ctags https://github.com/universal-ctags/ctags
 * kitty themes: `git clone --depth 1 https://github.com/dexpota/kitty-themes.git ~/.config/kitty/kitty-themes`
 * neovim kickstart: `git clone https://github.com/nvim-lua/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim`
+* starship: `curl -fsSL https://starship.rs/install.sh | bash` and `eval "$(starship init bash)"` to `~/.bashrc`
 
 ## Paths
 
