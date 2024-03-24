@@ -64,6 +64,9 @@ ln -s ~/.local/kitty.app/bin/kitty ~/.local/bin/kitty
 export BIN_DIR=~/.local/bin && curl -fsSL https://starship.rs/install.sh | sh
 # Put:
 # eval "$(starship init bash)" to ~/.bashrc
+
+# Use neovim as git editor
+git config --global core.editor nvim
 ```
 
 * Vim custom C++ helpers: `ln -s ~/Workspace/Dotfiles/vim/pythonx ~/.vim/pythonx`
