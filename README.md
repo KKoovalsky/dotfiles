@@ -19,7 +19,7 @@ sudo update-alternatives --config vim
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator ~/.local/bin/kitty 10
 sudo update-alternatives --config x-terminal-emulator
 ```
-* clangd:
+* clangd (_not really needed_):
 ```
 # Download LLVM and ...
 cd <LLVM>
@@ -35,7 +35,7 @@ sudo update-alternatives --config clangd
 ```
 * FantasqueSansMono NerdFont: https://www.nerdfonts.com/
 
-## Misc
+## Misc (_not necessary_)
 
 * Universal ctags https://github.com/universal-ctags/ctags
 * bash-language-server
@@ -69,6 +69,7 @@ export BIN_DIR=~/.local/bin && curl -fsSL https://starship.rs/install.sh | sh
 git config --global core.editor nvim
 ```
 
+### To be ported  ...
+
 * Vim custom C++ helpers: `ln -s ~/Workspace/Dotfiles/vim/pythonx ~/.vim/pythonx`
 * Ultisnips: `mkdir ~/.vim/Ultisnips && ln -s ~/Workspace/Dotfiles/vim/UltiSnips/c.snippets ~/.vim/Ultisnips/c.snippets`
-* AsyncTasks - `~/.vim/tasks.ini`
