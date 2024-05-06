@@ -32,20 +32,6 @@ sudo update-alternatives --config vim
 sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator ~/.local/bin/kitty 10
 sudo update-alternatives --config x-terminal-emulator
 ```
-* clangd (_not really needed_):
-```
-# Download LLVM and ...
-cd <LLVM>
-mkdir build && cd build
-cmake -G Ninja -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra" -DCMAKE_BUILD_TYPE=Release ../llvm
-# Takes a while ...
-cmake --build . --target clangd
-export VERSION=<version>
-cmake -DCMAKE_INSTALL_PREFIX=~/.local/clangd_${VERSION} ../llvm
-cmake --install . --component clangd
-sudo update-alternatives --install /usr/bin/clangd clangd ~/.local/clangd_${VERSION}/bin/clangd 20
-sudo update-alternatives --config clangd
-```
 * FantasqueSansMono NerdFont: https://www.nerdfonts.com/
 ```
 z Down
@@ -62,6 +48,20 @@ fc-cache -f -v
 * Universal ctags https://github.com/universal-ctags/ctags
 * bash-language-server
 * flake8
+* clangd (_not really needed_):
+```
+# Download LLVM and ...
+cd <LLVM>
+mkdir build && cd build
+cmake -G Ninja -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra" -DCMAKE_BUILD_TYPE=Release ../llvm
+# Takes a while ...
+cmake --build . --target clangd
+export VERSION=<version>
+cmake -DCMAKE_INSTALL_PREFIX=~/.local/clangd_${VERSION} ../llvm
+cmake --install . --component clangd
+sudo update-alternatives --install /usr/bin/clangd clangd ~/.local/clangd_${VERSION}/bin/clangd 20
+sudo update-alternatives --config clangd
+```
 
 ## Paths
 
