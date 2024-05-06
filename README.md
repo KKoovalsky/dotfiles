@@ -4,12 +4,25 @@
 
 ### Apps
 
+* Basic:
+```
+sudo apt install vim gcc g++ cmake git
+```
+
 * Rupa/Z: https://github.com/rupa/z
+```
+mkdir ~/Workspace
+git clone https://github.com/rupa/z.git ~/Workspace/RupaZ
+# Append to ~/.bashrc:
+# . ~/Workspace/RupaZ/z.sh
+```
+
 * Neovim; download and run:
 ```
 z Down
 tar -xf nvim-linux64.tar.gz
 mv nvim-linux64 ~/.local/nvim.app
+mkdir -p ~/.local/bin
 ln -s ~/.local/nvim.app/bin/nvim ~/.local/bin/nvim
 sudo update-alternatives --install /usr/bin/vim vim ~/.local/bin/nvim 20
 sudo update-alternatives --config vim
@@ -34,6 +47,15 @@ sudo update-alternatives --install /usr/bin/clangd clangd ~/.local/clangd_${VERS
 sudo update-alternatives --config clangd
 ```
 * FantasqueSansMono NerdFont: https://www.nerdfonts.com/
+```
+z Down
+mkdir fonts
+unzip FantasqueSansMono.zip -d fonts
+cd fonts
+mkdir -p ~/.local/share/fonts
+mv *.ttf ~/.local/share/fonts/.
+fc-cache -f -v
+```
 
 ## Misc (_not necessary_)
 
