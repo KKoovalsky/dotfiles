@@ -6,7 +6,8 @@
 
 * Basic:
 ```
-sudo apt install vim gcc g++ cmake git
+sudo apt update
+sudo apt install vim gcc g++ cmake git nodejs
 ```
 
 * Rupa/Z: https://github.com/rupa/z
